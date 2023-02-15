@@ -1,4 +1,4 @@
-###Pixelate-Image_V2
+##Pixelate-Image_V2
 This is an updated version of the Pixelate-Image script, which includes the following changes:
 
 The addition of the Tk and filedialog modules from the tkinter package, which enable the creation of a GUI file dialog for the user to select the image file path and destination folder.
