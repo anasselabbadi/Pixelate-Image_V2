@@ -1,4 +1,4 @@
-Pixelate-Image_V2
+###Pixelate-Image_V2
 This is an updated version of the Pixelate-Image script, which includes the following changes:
 
 The addition of the Tk and filedialog modules from the tkinter package, which enable the creation of a GUI file dialog for the user to select the image file path and destination folder.
@@ -14,7 +14,8 @@ To use this script, follow these steps:
 Install the required packages by running the following command:
 Copy code
 ```python
-pip install Pillow
+pip install tkinter
+pip install PIL
 ```
 1-Copy the code to a Python file, and save it to your desired location.
 
