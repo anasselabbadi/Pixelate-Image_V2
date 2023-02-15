@@ -1,14 +1,31 @@
-# Pixelate-Image_V2
-this is the update of Pixelate-Image
+Pixelate-Image_V2
+This is an updated version of the Pixelate-Image script, which includes the following changes:
 
-The first change in the updated code is the addition of the Tk and filedialog modules from the tkinter package. These modules allow the code to create a GUI file dialog that the user can use to select the image file path and destination folder.
+The addition of the Tk and filedialog modules from the tkinter package, which enable the creation of a GUI file dialog for the user to select the image file path and destination folder.
+The pixelate_image function, which takes three arguments: image_path, pixel_size, and dest_folder. Image_path is the file path of the original image, pixel_size is the size of the pixelation block, and dest_folder is the destination folder for the pixelated image.
+Opening the original image using the Image.open method from the PIL package, and obtaining its dimensions using the size attribute.
+Checking that the pixel_size entered by the user is not greater than the dimensions of the original image. If the pixel_size is too big, an error message is printed and the function returns.
+Resizing the image to a smaller size using the resize method with the BOX resampling method. The BOX resampling method reduces the image size by averaging the pixels in each block of size pixel_size, creating a pixelated effect.
+Resizing the image back to its original size using the NEAREST resampling method, which preserves the sharp edges of the pixelated blocks.
+Asking the user for the destination path and file name using the asksaveasfilename method from the filedialog module. The user can choose the file extension and destination folder.
+Using the save method from the Image class to save the pixelated image to the specified destination folder and file name.
+To use this script, follow these steps:
 
-The pixelate_image function takes three arguments: image_path, pixel_size, and dest_folder. The image_path argument is the file path of the original image, pixel_size is the size of the pixelation block, and dest_folder is the destination folder for the pixelated image.
+Install the required packages by running the following command:
+Copy code
+```python
+pip install Pillow
+```
+1-Copy the code to a Python file, and save it to your desired location.
 
-Inside the function, the original image is opened using the Image.open method from the PIL package, and its dimensions are obtained using the size attribute. The function then checks that the pixel_size entered by the user is not greater than the dimensions of the original image. If the pixel_size is too big, an error message is printed and the function returns.
+2-Open the Python file in a code editor or IDE of your choice.
 
-Next, the function resizes the image to a smaller size using the resize method with the BOX resampling method. The resampling method determines how the image is resized. BOX is a resampling method that reduces the image size by averaging the pixels in each block of size pixel_size. This creates a pixelated effect.
+3-Run the script.
 
-The function then resizes the image back to its original size using the NEAREST resampling method. This method is used because it preserves the sharp edges of the pixelated blocks.
+4-When prompted, select the original image file using the file dialog.
 
-After that, the function uses the asksaveasfilename method from the filedialog module to ask the user for the destination path and file name. The user can choose the file extension and the destination folder. The save method from the Image class is used to
+5-Enter the desired pixel size for the pixelation block.
+
+6-When prompted, select the destination folder using the file dialog.
+
+7-The pixelated image will be saved in the destination folder with the file name and extension of your choice.
