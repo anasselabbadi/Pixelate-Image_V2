@@ -12,19 +12,3 @@ Next, the function resizes the image to a smaller size using the resize method w
 The function then resizes the image back to its original size using the NEAREST resampling method. This method is used because it preserves the sharp edges of the pixelated blocks.
 
 After that, the function uses the asksaveasfilename method from the filedialog module to ask the user for the destination path and file name. The user can choose the file extension and the destination folder. The save method from the Image class is used to
-```python
-from PIL import Image
-
-def pixelate_image(image_path, pixel_size):
-    with Image.open(image_path) as im:
-        # Resize the image to a smaller size
-        im = im.resize((im.width // pixel_size, im.height // pixel_size), Image.BOX)
-        # Resize the image back to its original size
-        im = im.resize((im.width * pixel_size, im.height * pixel_size), Image.NEAREST)
-        im.save("pixelated_" + image_path)
-
-if __name__ == '__main__':
-    image_path = "my_image.png"
-    pixel_size = 10
-    pixelate_image(image_path, pixel_size)
-```
